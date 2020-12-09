@@ -90,11 +90,17 @@ jQuery.fn = jQuery.prototype = { //避免浪费内存，把相同方法都放在
                 //array.push(node.children) //这样push会是二维数组
                 array.push(...node.children)
             }
-
         })
         return jQuery(array)
     },
     print() {
         console.log(this.elements);
+    },
+    on(eventType, fn) {
+        this.each((node) => {
+            node.addEventListener(eventType, fn)
+        })
+
     }
+
 }

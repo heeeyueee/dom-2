@@ -13,3 +13,6 @@ $('#test2').children().print()
 console.log($p);
 $('<ol>创建一个ol</ol>').appendTo($p)
 $('p').append($('<ol>xxxx</ol>'))
+$("p").on("click", function () {
+    alert("段落被点击了。");
+});
